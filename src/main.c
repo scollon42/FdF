@@ -6,7 +6,7 @@
 /*   By: scollon <scollon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/01 10:04:41 by scollon           #+#    #+#             */
-/*   Updated: 2016/04/29 09:45:24 by scollon          ###   ########.fr       */
+/*   Updated: 2016/05/16 09:24:14 by scollon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void	read_arg(t_env *env, int ac, char **av)
 	if (env->arg.hg >= 200 && env->arg.hg <= 2000)
 		env->win_y = env->arg.hg;
 	env->win = mlx_new_window(env->mlx, env->win_x, env->win_y, env->arg.file);
-	// init_p(env);
+	init_p(env);
 }
 
 void	display_menu(t_env *env)

@@ -6,7 +6,7 @@
 /*   By: scollon <scollon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/04 09:07:55 by scollon           #+#    #+#             */
-/*   Updated: 2016/01/11 10:23:20 by scollon          ###   ########.fr       */
+/*   Updated: 2016/05/16 09:22:14 by scollon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	img_pixel_put(t_env *env, int x, int y, int *color)
 
 	if (x >= 0 && x < env->win_x && y >= 0 && y < env->win_y)
 	{
-		pos = (x * env->img.bpp / 8) + (y * env->img.sl);
+		pos = (x * env->img.opp) + (y * env->img.sl);
 		env->img.img[pos] = color[0];
 		env->img.img[pos + 1] = color[1];
 		env->img.img[pos + 2] = color[2];

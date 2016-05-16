@@ -6,7 +6,7 @@
 /*   By: scollon <scollon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/06 07:26:04 by scollon           #+#    #+#             */
-/*   Updated: 2016/04/29 09:44:59 by scollon          ###   ########.fr       */
+/*   Updated: 2016/05/16 09:34:30 by scollon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ int				*color(t_env *env, int h)
 	if (!(color = (int *)malloc(sizeof(int) * 3)))
 		error(env, 8);
 	pch = set_index(env, h);
-	color[0] = 255;
-	color[1] = 255;
-	color[2] = 255;
+	color[0] = (env->pal.p[env->pc][pch] % 256);
+	color[1] = ((env->pal.p[env->pc][pch] >> 8) % 256);
+	color[2] = ((env->pal.p[env->pc][pch] >> 16) % 256);
 	return (color);
 }

@@ -6,7 +6,7 @@
 /*   By: scollon <scollon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/01 10:05:40 by scollon           #+#    #+#             */
-/*   Updated: 2016/01/12 10:54:44 by scollon          ###   ########.fr       */
+/*   Updated: 2016/05/16 09:21:40 by scollon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ typedef struct		s_img
 	char			*img;
 	int				endian;
 	int				bpp;
+	int				opp;
 	int				sl;
 }					t_img;
 

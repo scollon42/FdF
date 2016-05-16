@@ -6,7 +6,7 @@
 #    By: scollon <scollon@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/01/01 10:19:30 by scollon           #+#    #+#              #
-#    Updated: 2016/01/12 08:26:29 by scollon          ###   ########.fr        #
+#    Updated: 2016/05/16 09:23:42 by scollon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,8 +35,8 @@ LIB = $(LIB_PATH)$(LIB_NAME)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	make -C libft re
-	make -C mlx re
+	make -C libft
+	make -C mlx
 	@$(CC) $(CFLAGS) $(MLX) $(LIB) $(INC_LIBFT) $(INC) $(OBJ) -o $(NAME)
 	@ls libft | grep -q libft.a && echo "LIBFT   [\033[32mOK\033[0m]" || \
 	echo "LIBFT   [\033[31mKO\033[0m]"
