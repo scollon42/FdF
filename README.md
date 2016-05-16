@@ -1,2 +1,2 @@
 # FdF
-FdF project 42
+First graphic 42 project
